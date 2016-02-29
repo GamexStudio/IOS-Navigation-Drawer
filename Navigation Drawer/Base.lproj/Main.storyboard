@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UoS-ul-zz1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Nav Drawer-->
+        <scene sceneID="C0w-Qe-IaY">
+            <objects>
+                <navigationController id="UoS-ul-zz1" customClass="CCKFNavDrawer" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NpD-5X-5nA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6aJ-M2-ewv" kind="relationship" relationship="rootViewController" id="CMk-ij-tEt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kH5-TU-oOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-689" y="283"/>
+        </scene>
+        <!--Gamex Navigation Drawer-->
+        <scene sceneID="XrW-hI-tea">
+            <objects>
+                <viewController id="6aJ-M2-ewv" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OmW-P9-zhh"/>
+                        <viewControllerLayoutGuide type="bottom" id="kWM-9s-PL5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G5b-4e-UQt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgq-W4-JFy">
+                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.71764705880000002" green="0.1807223691" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lgq-W4-JFy" firstAttribute="centerY" secondItem="G5b-4e-UQt" secondAttribute="centerY" id="Xkl-PC-2Z9"/>
+                            <constraint firstItem="Lgq-W4-JFy" firstAttribute="centerX" secondItem="G5b-4e-UQt" secondAttribute="centerX" id="qy5-ta-YLA"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Gamex Navigation Drawer" id="4FU-QD-8sr">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="fVm-Yo-fUX">
+                            <color key="tintColor" red="1" green="0.42359683390000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="drawerToggle:" destination="6aJ-M2-ewv" id="vR0-i6-MX3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="lbltext" destination="Lgq-W4-JFy" id="Xjc-M2-MAS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PgR-U5-IK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="169"/>
+        </scene>
+    </scenes>
+</document>
